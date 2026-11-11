@@ -1,16 +1,52 @@
 #pragma once
+#include <iostream>
+#include <vector>
+#include <string>
+#include <algorithm>
 #include "DataStructures.h"
 
-// Thuật toán sắp xếp (tự cài đặt Quick Sort hoặc Merge Sort)
-void sapXepDanhSachTheoTen(LinkedListSV& ds);
+// ============================================================================
+// CHỨC NĂNG: TÍNH NĂNG NÂNG CAO VÀ QUẢN LÝ BỘ NHỚ (Advanced Features & Memory Management)
+// Thành viên thực hiện: Bùi Đình Khôi
+// Nhánh GitHub: advanced-features
+// ============================================================================
 
-// Thống kê
-void thongKeLopTiLeThap(const LinkedListSV& dsLop); 
-void inThoiKhoaBieu(const std::string& mssv, const LinkedListSV& dsLop);
+class AdvancedFeatures {
+public:
+    // 1. TÍNH NĂNG NÂNG CAO: Kiểm tra điều kiện ràng buộc giới hạn tín chỉ đăng ký (Tối đa 25 tín chỉ)
+    static bool kiemTraGioiHanTinChi(int soTinChiDaDangKy, int soTinChiMonMoi) {
+        int tongTinChi = soTinChiDaDangKy + soTinChiMonMoi;
+        if (tongTinChi > 25) {
+            std::cout << "\n[CANH BAO] Dang ky that bai: Tong so tin chi (" 
+                      << tongTinChi << ") vuot qua gioi han cho phap (25 tin chi)!\n";
+            return false;
+        }
+        std::cout << "\n[THONG BAO] So tin chi hợp le (" << tongTinChi << "/25 tin chi).\n";
+        return true;
+    }
 
-// Chức năng nâng cao & Thực nghiệm
-void moPhong10000SinhVienDangKy(HashTable& dsSV, LinkedListSV& dsLop); // Sinh đồng thời ngẫu nhiên
-void tinhToanThoiGianThucThi(); // Trả về số liệu để viết báo cáo
+    // 2. TÍNH NĂNG NÂNG CAO: Sắp xếp danh sách lớp học phần theo sĩ số hiện tại (Giảm dần)
+    // Thuật toán sắp xếp QuickSort/std::sort với độ phức tạp O(N log N)
+    static void sapXepLopTheoSiSo(std::vector<LopHocPhan>& danhSachLop) {
+        std::sort(danhSachLop.begin(), danhSachLop.end(), [](const LopHocPhan& a, const LopHocPhan& b) {
+            return a.siSoHienTai > b.siSoHienTai;
+        });
+        std::cout << "\n[INFO] Da sap xep danh sach lop hoc phan theo si so giam dan.\n";
+    }
 
-// Quản lý bộ nhớ - RẤT QUAN TRỌNG ĐỂ KHÔNG BỊ TRỪ ĐIỂM
-void giaiPhongToanBoBoNho(HashTable& dsSV, LinkedListSV& dsLop);
+    // 3. QUẢN LÝ BỘ NHỚ: Thu hồi và giải phóng bộ nhớ động (Memory Leak Prevention)
+    // Tự động thu hồi các con trỏ cấp phát động trong vector trước khi kết thúc chương trình
+    template <typename T>
+    static void giaiPhongBoNhoDong(std::vector<T*>& danhSachConTro) {
+        int count = 0;
+        for (size_t i = 0; i < danhSachConTro.size(); ++i) {
+            if (danhSachConTro[i] != nullptr) {
+                delete danhSachConTro[i];
+                danhSachConTro[i] = nullptr;
+                count++;
+            }
+        }
+        danhSachConTro.clear();
+        std::cout << "\n[MEMORY MANAGEMENT] Da giai phong " << count << " vung nho dong an toan!\n";
+    }
+};
