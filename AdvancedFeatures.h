@@ -49,4 +49,38 @@ public:
         danhSachConTro.clear();
         std::cout << "\n[MEMORY MANAGEMENT] Da giai phong " << count << " vung nho dong an toan!\n";
     }
+};#pragma once
+#include <iostream>
+#include <vector>
+#include <string>
+#include <algorithm>
+#include "DataStructures.h"
+
+// ============================================================================
+// FILE KHAI BÁO: AdvancedFeatures.h
+// Thành viên thực hiện: Bùi Đình Khôi
+// ============================================================================
+
+class AdvancedFeatures {
+public:
+    // 1. Khai báo hàm kiểm tra giới hạn tín chỉ (tối đa 25 tín chỉ)
+    static bool kiemTraGioiHanTinChi(int soTinChiDaDangKy, int soTinChiMonMoi);
+
+    // 2. Khai báo hàm sắp xếp danh sách lớp học phần theo sĩ số giảm dần
+    static void sapXepLopTheoSiSo(std::vector<LopHocPhan>& danhSachLop);
+
+    // 3. Hàm Template thu hồi bộ nhớ động (C++ yêu cầu định nghĩa template ngay tại file .h)
+    template <typename T>
+    static void giaiPhongBoNhoDong(std::vector<T*>& danhSachConTro) {
+        int count = 0;
+        for (size_t i = 0; i < danhSachConTro.size(); ++i) {
+            if (danhSachConTro[i] != nullptr) {
+                delete danhSachConTro[i];
+                danhSachConTro[i] = nullptr;
+                count++;
+            }
+        }
+        danhSachConTro.clear();
+        std::cout << "\n[MEMORY MANAGEMENT] Da giai phong " << count << " vung nho dong an toan!\n";
+    }
 };
