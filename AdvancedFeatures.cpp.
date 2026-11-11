@@ -1,0 +1,26 @@
+#include "AdvancedFeatures.h"
+
+// ============================================================================
+// FILE CÀI ĐẶT CHI TIẾT: AdvancedFeatures.cpp
+// Thành viên thực hiện: Bùi Đình Khôi
+// ============================================================================
+
+// 1. Cài đặt hàm kiểm tra giới hạn tín chỉ đăng ký
+bool AdvancedFeatures::kiemTraGioiHanTinChi(int soTinChiDaDangKy, int soTinChiMonMoi) {
+    int tongTinChi = soTinChiDaDangKy + soTinChiMonMoi;
+    if (tongTinChi > 25) {
+        std::cout << "\n[CANH BAO] Dang ky that bai: Tong so tin chi (" 
+                  << tongTinChi << ") vuot qua gioi han cho phap (25 tin chi)!\n";
+        return false;
+    }
+    std::cout << "\n[THONG BAO] So tin chi hop le (" << tongTinChi << "/25 tin chi).\n";
+    return true;
+}
+
+// 2. Cài đặt hàm sắp xếp danh sách lớp học phần theo sĩ số giảm dần (Độ phức tạp O(N log N))
+void AdvancedFeatures::sapXepLopTheoSiSo(std::vector<LopHocPhan>& danhSachLop) {
+    std::sort(danhSachLop.begin(), danhSachLop.end(), [](const LopHocPhan& a, const LopHocPhan& b) {
+        return a.siSoHienTai > b.siSoHienTai;
+    });
+    std::cout << "\n[INFO] Da sap xep danh sach lop hoc phan theo si so giam dan.\n";
+}
