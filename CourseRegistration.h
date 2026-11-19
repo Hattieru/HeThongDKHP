@@ -2,38 +2,18 @@
 #include <string>
 #include "DataStructures.h"
 
-using namespace std;
-
+// Quản lý lớp
 bool moLopHocPhan(LinkedListSV& dsLop, const LopHocPhan& lopMoi);
+void xemDanhSachLopConCho(const LinkedListSV& dsLop, const std::string& maMon);
 
-void xemDanhSachLopConCho(
-    const LinkedListSV& dsLop,
-    const string& maMon
-);
+// Logic đăng ký
+bool kiemTraDieuKienTienQuyet(const std::string& mssv, const std::string& maMon);
+bool kiemTraTrungLich(const std::string& mssv, const std::string& lichHocMoi);
+bool kiemTraGioiHanTinChi(const SinhVien& sv, int tinChiMonMoi); // Tối đa 25 tín chỉ
 
-bool kiemTraDieuKienTienQuyet(
-    const string& mssv,
-    const string& maMon
-);
+// Hành động của Sinh viên
+int dangKyHocPhan(const std::string& mssv, const std::string& maLop); 
+// Trả về: 1 (Thành công), 2 (Vào hàng đợi), 0 (Thất bại do vi phạm điều kiện)
 
-bool kiemTraTrungLich(
-    const string& mssv,
-    const string& lichHocMoi
-);
-
-bool kiemTraGioiHanTinChi(
-    const SinhVien& sv,
-    int tinChiMonMoi
-);
-
-int dangKyHocPhan(
-    const string& mssv,
-    const string& maLop
-);
-
-bool huyDangKy(
-    const string& mssv,
-    const string& maLop
-);
-
-void xetDuyetHangDoi(const string& maLop);
+bool huyDangKy(const std::string& mssv, const std::string& maLop);
+void xetDuyetHangDoi(const std::string& maLop); // Kéo SV đầu hàng đợi vào lớp khi có người hủy
