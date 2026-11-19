@@ -28,7 +28,7 @@ int nhapLuaChonMenu(int minVal, int maxVal) {
         }
     }
 }
-void hienThiMenuSinhVien(/* Tham chieu den danh sach can thiet */) {
+void hienThiMenuSinhVien(HashTable& dsSV, LinkedListSV& dsLop) {
     int chon;
     string mssv, maLop;
 
@@ -106,7 +106,7 @@ void hienThiMenuQuanTri() {
         }
     } while (chon != 0);
 }
-void hienThiMenuChinh(/* Trùng các danh sách dữ liệu từ main vào đây */) {
+void hienThiMenuChinh(HashTable& dsSV, LinkedListSV& dsLop) {
     int chon;
     do {
         cout << "\n==============================================" << endl;
@@ -122,7 +122,7 @@ void hienThiMenuChinh(/* Trùng các danh sách dữ liệu từ main vào đây
 
         switch (chon) {
             case 1:
-                hienThiMenuSinhVien();
+                hienThiMenuSinhVien(dsSV, dsLop);
                 break;
             case 2:
                 hienThiMenuQuanTri();

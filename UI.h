@@ -1,8 +1,9 @@
 #pragma once
 #include <string>
+#include "DataStructures.h"
 
 // Gọi các menu hiển thị (Console/Text menu)
-void hienThiMenuChinh();
+void hienThiMenuChinh(HashTable& dsSV, LinkedListSV& dsLop);
 void hienThiMenuSinhVien();
 void hienThiMenuQuanTri();
 

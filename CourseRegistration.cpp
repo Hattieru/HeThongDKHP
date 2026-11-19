@@ -14,9 +14,9 @@ bool kiemTraDieuKienTienQuyet(const std::string& mssv, const std::string& maMon)
 
 bool kiemTraTrungLich(const std::string& mssv, const std::string& lichHocMoi) {
     return false;
-
+}
 bool kiemTraGioiHanTinChi(const SinhVien& sv, int tinChiMonMoi) {
-    return (sv.tongTinChi + tinChiMonMoi) <= 25;
+    return (sv.soTinChiDaDK + tinChiMonMoi) <= 25;
 }
 
 int dangKyHocPhan(const std::string& mssv, const std::string& maLop) {
