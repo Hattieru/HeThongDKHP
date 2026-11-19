@@ -1,0 +1,14 @@
+22110001,Nguyen Van A,20
+22110002,Tran Thi B,18
+058207000295,Pham Ngoc Thanh,19
+060207001028, Bùi Đình Khôi, 17
+083207002035, Triệu Huỳnh Trần Thiên Hạt, 19
+054207008507, Nguyễn Phạm Quốc Huy, 20
+058207000296, Vũ Thu Phương, 21
+054207008708, Trần Anh Khôi, 24
+083207002041, Hà Lê Hoàng Hiệp, 16
+060207002085, Nguyễn Lê Hoàng, 19
+
+
+
+

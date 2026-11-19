@@ -1,0 +1,8 @@
+NMCN001,Nhap Mon Cong Nghe Thong Tin,3,100
+OOP001,Lap Trinh Huong Doi Tuong,3,80
+RR001,Cau Truc Roi Rac,3,70
+TRIET001,Triet Hoc Mac Lenin,2,120
+HDH001,He Dieu Hanh,3,60
+CSDL001,Co So Du Lieu,3,50
+GT001,Giai Thuat,4,55
+GYM001,Gym Fitness,2,100
