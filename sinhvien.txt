@@ -1,9 +1,10 @@
-LHP001,Nhap Mon Cong Nghe Thong Tin,100,3,45,Thu2_Tiet1-3,NULL
-LHP002,Lap Trinh Huong Doi Tuong,80,3,52,Thu3_Tiet4-6,LHP001
-LHP003,Cau Truc Roi Rac,70,3,30,Thu4_Tiet1-3,LHP001
-LHP004,Triet Hoc Mac Lenin,120,3,70,Thu5_Tiet7-9,NULL
-LHP005,He Dieu Hanh,60,3,25,Thu6_Tiet1-3,LHP002
-LHP006,Co So Du Lieu,50,3,40,Thu2_Tiet4-6,LHP002
-LHP007,Giai Thuat,55,3,38,Thu3_Tiet1-3,LHP001
-LHP008,Gym Fitness,100,3,20,Thu7_Tiet1-3,NULL
-LHP009,Ky Thuat Lap Trinh,120,4,1,Thu3_Tiet1-3,NONE
+058207000295,Pham Ngoc Thanh,2,19,LHP001
+058207000296,Vu Thu Phuong,3,21,LHP001;LHP002
+083207002035,Trieu Huynh Tran Thien Hat,2,19
+083207002041,Ha Le Hoang Hiep,1,16,LHP001
+22110001,Nguyen Van A,2,20
+22110002,Tran Thi B,1,22
+060207002085,Nguyen Le Hoang,2,19
+060207001028,Bui Dinh Khoi,2,17
+054207008507,Nguyen Pham Quoc Huy,2,20
+054207008708,Tran Anh Khoi,4,24
