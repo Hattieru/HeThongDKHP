@@ -2,15 +2,6 @@
 #include <string>
 #include "DataStructures.h"
 
-// Gọi các menu hiển thị (Console/Text menu)
-void hienThiMenuChinh(HashTable& dsSV, LinkedListSV& dsLop);
-void hienThiMenuSinhVien();
-void hienThiMenuQuanTri();
-
-// Các hàm tương tác nhập xuất
-std::string nhapMSSV();
-std::string nhapMaLop();
-void inThongBao(const std::string& thongBao);
-
-// Bắt lỗi dữ liệu nhập từ bàn phím (mã trùng, sai kiểu, sai miền)
-bool kiemTraDuLieuDauVao(const std::string& input, int kieuKiemTra);
+void hienThiMenuChinh(HashTable& dsSV, LinkedListLop& dsLop);
+void hienThiMenuSinhVien(HashTable& dsSV, LinkedListLop& dsLop);
+void hienThiMenuQuanTri(HashTable& dsSV, LinkedListLop& dsLop);

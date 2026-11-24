@@ -2,6 +2,6 @@
 #include <string>
 #include "DataStructures.h"
 
-void docDuLieuKhoiDong(HashTable& dsSV, LinkedListSV& dsLop);
-void ghiDuLieuKetThuc(const HashTable& dsSV, const LinkedListSV& dsLop);
-void sinhDuLieuNgauNhien(int soLuong); // Tạo bộ data >= 10^4 bản ghi
+void docDuLieuKhoiDong(HashTable& dsSV, LinkedListLop& dsLop);
+void ghiDuLieuKetThuc(const HashTable& dsSV, const LinkedListLop& dsLop);
+void sinhDuLieuNgauNhien(int soLuong);

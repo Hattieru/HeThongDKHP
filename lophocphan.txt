@@ -1,8 +1,9 @@
-LHP001,Nhap Mon Cong Nghe Thong Tin,100,45,Thu2_Tiet1-3,NULL
-LHP002,Lap Trinh Huong Doi Tuong,80,52,Thu3_Tiet4-6,NMCNTT
-LHP003,Cau Truc Roi Rac,70,30,Thu4_Tiet1-3,NMCNTT
-LHP004,Triet Hoc Mac Lenin,120,70,Thu5_Tiet7-9,NULL
-LHP005,He Dieu Hanh,60,25,Thu6_Tiet1-3,OOP
-LHP006,Co So Du Lieu,50,40,Thu2_Tiet4-6,OOP
-LHP007,Giai Thuat,55,38,Thu3_Tiet1-3,CTDL
-LHP008,Gym Fitness,100,20,Thu7_Tiet1-3,NULL
+LHP001,Nhap Mon Cong Nghe Thong Tin,100,3,45,Thu2_Tiet1-3,NULL
+LHP002,Lap Trinh Huong Doi Tuong,80,3,52,Thu3_Tiet4-6,NMCNTT
+LHP003,Cau Truc Roi Rac,70,3,30,Thu4_Tiet1-3,NMCNTT
+LHP004,Triet Hoc Mac Lenin,120,3,70,Thu5_Tiet7-9,NULL
+LHP005,He Dieu Hanh,60,3,25,Thu6_Tiet1-3,OOP
+LHP006,Co So Du Lieu,50,3,40,Thu2_Tiet4-6,OOP
+LHP007,Giai Thuat,55,3,38,Thu3_Tiet1-3,CTDL
+LHP008,Gym Fitness,100,3,20,Thu7_Tiet1-3,NULL
+LHP009,Ky Thuat Lap Trinh,120,4,1,Thu3_Tiet7-9,NONE

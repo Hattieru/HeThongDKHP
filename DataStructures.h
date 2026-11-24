@@ -1,26 +1,35 @@
 #pragma once
+#include <string>
 #include "Models.h"
 
-// 1. Danh sách liên kết đơn (DSLK) cho Lớp học phần & Sinh viên đã đăng ký
-struct NodeSV {
-    SinhVien data;
-    NodeSV* next;
-};
-struct LinkedListSV {
-    NodeSV* head;
-    NodeSV* tail;
-    // Các hàm: add, remove, find...
+struct NodeLop {
+    LopHocPhan data;
+    NodeLop* next = nullptr;
 };
 
-// 2. Hàng đợi (Queue) cho Sinh viên chờ
-struct Queue {
-    NodeSV* front;
-    NodeSV* rear;
-    // Các hàm: enqueue, dequeue, isEmpty, getFront (ưu tiên năm cuối)
+struct LinkedListLop {
+    NodeLop* head = nullptr;
+    NodeLop* tail = nullptr;
 };
 
-// 3. Bảng băm (Hash Table) quản lý toàn bộ Sinh viên theo MSSV
+// Bảng băm quản lý sinh viên theo MSSV (kích thước số nguyên tố tối ưu cho 10^4 SV)
+const int TABLE_SIZE = 10007;
+
 struct HashTable {
-    // Khai báo mảng con trỏ, hàm băm hash(mssv)
-    // Các hàm: insert, search, remove...
+    NodeSV* buckets[TABLE_SIZE] = { nullptr };
 };
+
+// Hàm thao tác Bảng băm (Sinh viên)
+int hashMSSV(const std::string& mssv);
+bool themSinhVien(HashTable& dsSV, const SinhVien& sv);
+SinhVien* timSinhVien(HashTable& dsSV, const std::string& mssv);
+
+// Hàm thao tác Danh sách liên kết Sinh viên
+void themCuoiSV(LinkedListSV& ds, const SinhVien& sv);
+bool xoaSVTheoMSSV(LinkedListSV& ds, const std::string& mssv);
+bool tonTaiSV(const LinkedListSV& ds, const std::string& mssv);
+
+// Hàm thao tác Hàng đợi (có ưu tiên sinh viên năm cuối)
+bool isEmptyQueue(const Queue& q);
+void enqueue(Queue& q, const SinhVien& sv);
+bool dequeue(Queue& q, SinhVien& svOut);

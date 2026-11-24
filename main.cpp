@@ -9,7 +9,7 @@ using namespace std;
 int main() {
     // 1. Khoi tao cac cau truc du lieu tong (khoi tao rong de tranh con tro rac)
     HashTable dsSV{};
-    LinkedListSV dsLop{};
+    LinkedListLop dsLop{};
 
     // 2. Doc du lieu tu file text khi khoi dong chuong trinh
     docDuLieuKhoiDong(dsSV, dsLop);
